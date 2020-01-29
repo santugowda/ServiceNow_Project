@@ -40,8 +40,8 @@ class ReviewListActivityKt : ListActivity() {
             )
 
             val reviewImage: ImageView = row.findViewById(R.id.image) as ImageView
-            val shopName = row.findViewById(R.id.text1) as TextView
-            val reviewText = row.findViewById(R.id.text2) as TextView
+            val shopName = row.findViewById(R.id.name) as TextView
+            val reviewText = row.findViewById(R.id.review) as TextView
 
             val review: Review = CoffeeShopReviews.list[position]
             shopName.text = review.name
