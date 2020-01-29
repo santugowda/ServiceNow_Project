@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class ReviewMainViewModel extends ViewModel {
 
     private static final String TAG = ReviewMainViewModel.class.getSimpleName();
+
     private MutableLiveData<ArrayList<ReviewModel>> reviewsLiveData;
     private ReviewRepository reviewRepository;
 

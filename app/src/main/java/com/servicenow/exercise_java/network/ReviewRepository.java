@@ -39,9 +39,7 @@ public class ReviewRepository {
             @Override
             public void onResponse(@NotNull Call<ArrayList<ReviewModel>> call, @NotNull Response<ArrayList<ReviewModel>> response) {
                 if (response.isSuccessful()) {
-                    if (response.body() != null) {
-                        Log.d(TAG, "Retrofit call success with response: " + response.body().toString());
-                    }
+                    Log.d(TAG, "Retrofit call success with response: " + response.body().toString());
                     reviewsLiveData.setValue(response.body());
                 }
             }
@@ -49,7 +47,7 @@ public class ReviewRepository {
             @Override
             public void onFailure(Call<ArrayList<ReviewModel>> call, Throwable t) {
                 //read data for offline view via json file
-                Log.d(TAG, "Retrofit call faied with error: " + t.getLocalizedMessage());
+                Log.d(TAG, "Retrofit call failed with error: " + t.getLocalizedMessage());
             }
         });
 
