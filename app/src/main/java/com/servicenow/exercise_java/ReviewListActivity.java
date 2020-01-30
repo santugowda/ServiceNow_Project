@@ -50,8 +50,8 @@ public class ReviewListActivity extends ListActivity {
             }
 
             ImageView reviewImage = row.findViewById(R.id.image);
-            TextView shopName = row.findViewById(R.id.text1);
-            TextView reviewText = row.findViewById(R.id.text2);
+            TextView shopName = row.findViewById(R.id.name);
+            TextView reviewText = row.findViewById(R.id.review);
 
             Review review = coffeeShopReviews[position];
             shopName.setText(review.getName());

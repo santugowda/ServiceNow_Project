@@ -1,6 +1,5 @@
 package com.servicenow.exercise_java.view.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import java.util.List;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewViewHolder> {
 
-    private Context mContext;
     private List<ReviewModel> mReviewsList;
     private OnReviewClickEventListener mOnReviewClickEventListener;
 
