@@ -1,4 +1,4 @@
-package com.servicenow.exercise_java.network;
+package com.servicenow.exercise_java.repository;
 
 import com.servicenow.exercise_java.utils.ServiceNowConstants;
 

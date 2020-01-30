@@ -9,7 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.servicenow.exercise.R;
 
-public class ReviewViewHolder extends RecyclerView.ViewHolder {
+/**
+    View holder for Recycler view items/texts
+ */
+
+class ReviewViewHolder extends RecyclerView.ViewHolder {
 
     TextView name;
     TextView review;

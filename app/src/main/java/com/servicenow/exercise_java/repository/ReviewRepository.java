@@ -1,4 +1,4 @@
-package com.servicenow.exercise_java.network;
+package com.servicenow.exercise_java.repository;
 
 import android.util.Log;
 
