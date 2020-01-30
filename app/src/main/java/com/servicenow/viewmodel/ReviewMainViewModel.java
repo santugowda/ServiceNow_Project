@@ -1,5 +1,6 @@
 package com.servicenow.viewmodel;
 
+import android.content.Context;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
@@ -21,13 +22,15 @@ public class ReviewMainViewModel extends ViewModel {
 
     private MutableLiveData<ArrayList<ReviewModel>> reviewsLiveData;
     private ReviewRepository reviewRepository;
+    private Context mContext;
 
-    public void initViewModel() {
+    public void initViewModel(Context context) {
         if (reviewsLiveData != null) {
             return;
         }
+        mContext = context;
         reviewRepository = ReviewRepository.getInstance();
-        reviewsLiveData = reviewRepository.getReviews();
+        reviewsLiveData = reviewRepository.getReviews(context);
     }
 
     /**

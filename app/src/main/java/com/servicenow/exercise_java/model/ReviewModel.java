@@ -44,6 +44,13 @@ public class ReviewModel implements Parcelable {
         rating = in.readInt();
     }
 
+    public ReviewModel(String name, String review, int rating, String location) {
+        this.name = name;
+        this.review = review;
+        this.rating = rating;
+        this.location = location;
+    }
+
     public String getName() {
         return name;
     }

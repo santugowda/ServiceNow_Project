@@ -34,7 +34,7 @@ public class ReviewMainActivity extends AppCompatActivity implements ReviewAdapt
         setContentView(R.layout.activity_main);
         progressBar = findViewById(R.id.progressBar);
         ReviewMainViewModel mReviewMainViewModel = new ViewModelProvider(this).get(ReviewMainViewModel.class);
-        mReviewMainViewModel.initViewModel();
+        mReviewMainViewModel.initViewModel(getApplicationContext());
 
         mReviewAdapter = new ReviewAdapter(reviews, this);
 
