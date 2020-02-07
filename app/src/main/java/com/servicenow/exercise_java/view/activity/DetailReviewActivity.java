@@ -28,7 +28,7 @@ public class DetailReviewActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_review_detail);
+        setContentView(R.layout.review_detail_activity);
         shopNameText = findViewById(R.id.coffeeShopName);
         shopImageView = findViewById(R.id.coffeeShopImageView);
         shopReviewText = findViewById(R.id.textreview);

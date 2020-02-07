@@ -21,7 +21,7 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
 
-        <activity android:name="com.servicenow.exercise_java.view.activity.ReviewMainActivity">
+        <activity android:name="com.servicenow.exercise_java.view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
