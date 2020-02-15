@@ -1,7 +1,6 @@
 package com.servicenow.exercise_java.view.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +23,7 @@ import com.servicenow.exercise_java.view.adapter.ReviewAdapter;
 import com.servicenow.viewmodel.ReviewMainViewModel;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ReviewListFragment extends Fragment implements ReviewAdapter.OnReviewClickEventListener {
 
@@ -76,18 +76,27 @@ public class ReviewListFragment extends Fragment implements ReviewAdapter.OnRevi
         Log.d(TAG, "RecyclerView is populated with data");
     }
 
-    private void startDetailReviewActivity(ReviewModel review) {
-        Class destinationClass = DetailReviewActivity.class;
-        Intent intent = new Intent(getActivity(), destinationClass);
-        intent.putExtra(ServiceNowConstants.COFFEE_REVIEW_EXTRA, review);
-        startActivity(intent);
-        Log.d(TAG, "launching detailed review activity");
+    private void startDetailReviewFragment(ReviewModel review) {
+        DetailReviewFragment detailReviewFragment= new DetailReviewFragment();
+        Bundle args = new Bundle();
+
+        args.putParcelable(ServiceNowConstants.COFFEE_REVIEW_EXTRA, review);
+        detailReviewFragment.setArguments(args);
+
+        Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, detailReviewFragment, DetailReviewFragment.TAG)
+                .addToBackStack(null)
+                .commit();
+
+//        Class destinationClass = DetailReviewFragment.class;
+//        Intent intent = new Intent(getActivity(), destinationClass);
+//        intent.putExtra(ServiceNowConstants.COFFEE_REVIEW_EXTRA, review);
+//        startActivity(intent);
+        Log.d(TAG, "launching detailed review fragment");
     }
 
     @Override
     public void onReviewClick(ReviewModel review) {
-        startDetailReviewActivity(review);
+        startDetailReviewFragment(review);
     }
-
-
 }

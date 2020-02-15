@@ -27,6 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.servicenow.exercise_java.view.activity.DetailReviewActivity"></activity>
+<!--        <activity android:name="com.servicenow.exercise_java.view.activity.DetailReviewFragment"></activity>-->
     </application>
 </manifest>
